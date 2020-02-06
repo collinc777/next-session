@@ -30,6 +30,7 @@ function getOptions(opts = {}) {
 }
 
 export async function applySession(req, res, opts) {
+  if (!req || ! res) return;
   const options = getOptions(opts);
 
   if (req.session) return;
